@@ -151,21 +151,35 @@
 
     </div>
 
+    <!-- SECCION MODIFICADA Y SACADA DE https://codepen.io/lucasfernandodev/pen/QWgLNOL -->
+    <section class="container-xxl">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-5xl font-bold line-height-1">
+                    AUTORES
+                </h2>
+            </div>
 
-    <section>
+            <ui:repeat value="${autores}" var="autor">
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 appear-animation animated fadeInUpShorter appear-animation-visible mt-5 mb-5"
+                     data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200"
+                     style="animation-delay: 200ms;">
+                    <div class="card">
+                        <header class="card-personal-header" style="background: url(img/autores/${autor.idAutor}.jpg);">
+                            <h1 class="card-personal-name line-height-3 text-white	">${autor.nombre}
+                                ${autor.apellidos}</h1>
+                            <!--
+                            <p class="card-personal-description">
+                                Lorem Ipsum
+                            </p> -->
+                        </header>
+                    </div>
+                </div>
 
-        <main>
-            <h2>Autores</h2>
-
-            <ui:repeat value="#{autores}" var="autor">
-                <p>
-                    <strong>#{autor.nombre} #{autor.apellidos}</strong>
-                    <strong>#{autor.idAutor}</strong>
-                </p>
             </ui:repeat>
-
-        </main>
+        </div>
     </section>
+
 
     <footer>
         <p>© 2024 Biblioteca</p>

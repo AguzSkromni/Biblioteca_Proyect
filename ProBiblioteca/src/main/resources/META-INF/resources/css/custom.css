@@ -218,3 +218,241 @@
 .button-details:hover{
     color: black;
 }
+
+/* personal card */
+.card{
+  width: 290px;
+  height: auto;
+ display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #333;
+  color: #ddd;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+
+.card-personal-header{
+  width: 100%;
+  height: 430px;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center !important;
+  position: relative;
+  z-index: 1;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  aling-items: flex-end;
+  justify-content: flex-end;
+}
+
+.card-personal-header::before{
+content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(19, 15, 64,0.6);
+  display: block;
+  position: absolute;
+  top: 0;
+  lefT:0;
+  right: 0;
+  bottom: 0;
+}
+
+.card-personal-header > *{
+  position: relative;
+  z-index: 100;
+}
+
+.card-personal-header h1{
+  font-size: 2.5rem;
+}
+
+.card-personal-description{
+margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.4rem;
+  font-weight: 700;
+  opacity: 0.7
+}
+
+/* library section */
+.container-library {
+  background: #111;
+  background-image: linear-gradient(45deg, #1b2838, #111);
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr) ) ;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  gap: 2rem;
+  padding: 7rem;
+}
+
+.box {
+  --in-out-duration: 0.5s;
+
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  gap: 1rem;
+
+  &:is(:hover, :focus) {
+
+    & .box__image {
+    scale: 1.05;
+
+      &::after {
+        border-color: white;
+        -webkit-animation-name: scale-in, pulse;
+                animation-name: scale-in, pulse;
+        -webkit-animation-duration: var(--in-out-duration), 2s;
+                animation-duration: var(--in-out-duration), 2s;
+        -webkit-animation-iteration-count: 1, infinite;
+                animation-iteration-count: 1, infinite;
+        -webkit-animation-delay: 0s, var(--in-out-duration);
+                animation-delay: 0s, var(--in-out-duration);
+      }
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.box__title {
+  font-weight: bold;
+}
+
+.box__image {
+  aspect-ratio: 264 / 352;
+  display: flex;
+  position: relative;
+  transition: scale var(--in-out-duration);
+  /* smooths out transition */
+  scale: 1.01;
+  width: 100%;
+
+  &::before {
+    content: "";
+    display: block;
+    inset: 0;
+    background-image: var(--bg-image);
+    position: absolute;
+    filter: blur(1rem);
+    opacity: 0;
+    transition: opacity var(--in-out-duration);
+    scale: 1.05;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    inset: -0.5rem;
+    border: 3px solid transparent;
+    border-radius: 1rem;
+    opacity: 0;
+    position: absolute;
+
+    -webkit-animation-name: scale-out;
+
+            animation-name: scale-out;
+    -webkit-animation-duration: var(--in-out-duration);
+            animation-duration: var(--in-out-duration);
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+    transition-property: border-color;
+    transition-duration: var(--in-out-duration);
+  }
+
+  & img {
+    box-shadow: 0 0 0.25rem rgba(0 0 0 / 25%);
+    border-radius: 0.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(15px) saturate(3);
+            backdrop-filter: blur(15px) saturate(3);
+  }
+}
+
+@-webkit-keyframes scale-in {
+  from {
+    scale: 1.1;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    scale: 1.1;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scale-out {
+  from {
+    scale: 1;
+    opacity: 1;
+  }
+  to {
+    scale: 1.1;
+    opacity: 0;
+  }
+}
+
+@keyframes scale-out {
+  from {
+    scale: 1;
+    opacity: 1;
+  }
+  to {
+    scale: 1.1;
+    opacity: 0;
+  }
+}
