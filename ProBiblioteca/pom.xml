@@ -13,32 +13,20 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>ProBiblioteca</name>
     <description>Proyecto creado para administrar una biblioteca, tanto landing (Web) como internamente</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
 
-    <!-- se usara java 21 y joinfaces v. 5.1.2 -->
     <properties>
         <java.version>21</java.version>
         <joinfaces.version>5.1.2</joinfaces.version>
     </properties>
 
     <dependencies>
+        <!-- dependecias para web -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>org.joinfaces</groupId>
+            <artifactId>primefaces-spring-boot-starter</artifactId>
         </dependency>
-        
+
+        <!-- caracteristicas web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -47,20 +35,19 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.antlr</groupId>
-                    <artifactId>antlr4-runtime</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version> <!-- Especifica aquí la versión que deseas utilizar -->
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.projectlombok</groupId>-->
+        <!--            <artifactId>lombok</artifactId>-->
+        <!--            <optional>true</optional>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -75,40 +62,23 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- nueva dependencia -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.9.3</version> <!-- Cambia a la versión más reciente -->
-            <scope>test</scope>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf</artifactId>
+            <version>3.0</version>
         </dependency>
 
-        <!-- Dependencia ANTLR -->
         <dependency>
-            <groupId>org.antlr</groupId>
-            <artifactId>antlr4-runtime</artifactId>
-            <version>4.13.0</version> <!-- O la versión compatible que necesites -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
         </dependency>
 
-		    <!-- JoinFaces dependencies -->
-		<dependency>
-			<groupId>org.joinfaces</groupId>
-			<artifactId>jsf-spring-boot-starter</artifactId>
-		</dependency>
 
-		<dependency>
-			<groupId>org.joinfaces</groupId>
-			<artifactId>primefaces-spring-boot-starter</artifactId>
-		</dependency>
 
-		 <!-- PrimeFaces -->
-		<dependency>
-			<groupId>org.primefaces</groupId>
-			<artifactId>primefaces</artifactId>
-			<version>11.0.0</version>
-		</dependency>
     </dependencies>
 
-    <!-- join faces dependency management -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -120,6 +90,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 
     <build>
         <plugins>
