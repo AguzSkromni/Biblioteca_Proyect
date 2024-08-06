@@ -64,7 +64,7 @@
   .book-item p:not(.author) {
     display: block;
     display: -webkit-box;
-    height: 63px;
+    height: 20px;
     /* Fallback for non-webkit */
     font-size: 15px;
     line-height: 1.4;
@@ -203,4 +203,18 @@
     .book-item {
         width: calc(100% - 30px); /* 1 libro en pantallas muy pequeñas */
     }
+}
+
+.button-details{
+    background:    #00a1f2;
+    border-radius: 16px;
+    padding:       16px 31px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 21px/1 "Open Sans", sans-serif;
+    text-align:    center;
+}
+
+.button-details:hover{
+    color: black;
 }
