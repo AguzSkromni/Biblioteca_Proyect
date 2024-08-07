@@ -7,11 +7,9 @@
     <title>Biblioteca Proyecto</title>
     <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css"/>
 
-
     <!-- Basic -->
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-
     <meta name="keywords" content="Proyecto Biblioteca"/>
     <meta name="description" content="Proyecto landing biblioteca, control de libros, SQL, Java Spring"/>
     <meta name="author" content="Agustin Reyes Hernandez"/>
@@ -19,38 +17,37 @@
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no"/>
 
-
     <!-- Web Fonts -->
     <link id="googleFonts"
           href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&amp;Open+Sans:400,700,800&amp;display=swap"
           rel="stylesheet" type="text/css"/>
 
     <!-- Vendor CSS -->
-    <link rel="stylesheet" href="static/vendor/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="static/vendor/fontawesome-free/css/all.min.css"/>
-    <link rel="stylesheet" href="static/vendor/animate/animate.compat.css"/>
-    <link rel="stylesheet" href="static/vendor/simple-line-icons/css/simple-line-icons.min.css"/>
-    <link rel="stylesheet" href="static/vendor/owl.carousel/assets/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="static/vendor/owl.carousel/assets/owl.theme.default.min.css"/>
-    <link rel="stylesheet" href="static/vendor/magnific-popup/magnific-popup.min.css"/>
+    <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/vendor/fontawesome-free/css/all.min.css"/>
+    <link rel="stylesheet" href="/static/vendor/animate/animate.compat.css"/>
+    <link rel="stylesheet" href="/static/vendor/simple-line-icons/css/simple-line-icons.min.css"/>
+    <link rel="stylesheet" href="/static/vendor/owl.carousel/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="/static/vendor/owl.carousel/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="/static/vendor/magnific-popup/magnific-popup.min.css"/>
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="static/css/theme.css"/>
-    <link rel="stylesheet" href="static/css/theme-elements.css"/>
-    <link rel="stylesheet" href="static/css/theme-blog.css"/>
-    <link rel="stylesheet" href="static/css/theme-shop.css"/>
+    <link rel="stylesheet" href="/static/css/theme.css"/>
+    <link rel="stylesheet" href="/static/css/theme-elements.css"/>
+    <link rel="stylesheet" href="/static/css/theme-blog.css"/>
+    <link rel="stylesheet" href="/static/css/theme-shop.css"/>
 
     <!-- Demo CSS -->
-    <link rel="stylesheet" href="static/css/demos/demo-landing.css"/>
+    <link rel="stylesheet" href="/static/css/demos/demo-landing.css"/>
 
     <!-- Skin CSS -->
-    <link id="skinCSS" rel="stylesheet" href="static/css/skins/skin-landing.css"/>
+    <link id="skinCSS" rel="stylesheet" href="/static/css/skins/skin-landing.css"/>
 
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="static/css/custom.css"/>
+    <link rel="stylesheet" href="/static/css/custom.css"/>
 
     <!-- Head Libs -->
-    <script src="static/vendor/modernizr/modernizr.min.js"/>
+    <script src="/static/vendor/modernizr/modernizr.min.js"></script>
 </h:head>
 
 <h:body>
@@ -69,7 +66,7 @@
                                 <div class="header-logo" style="width: 100px; height: auto;">
                                     <a href="/">
                                         <img alt="Porto" width="100" height="auto" data-sticky-width="82"
-                                             data-sticky-height="40" src="static/img/logo/logo.png"
+                                             data-sticky-height="40" src="/static/img/logo/logo.png"
                                              style="top: 0px; width: 100px; height: auto;"/>
                                     </a>
                                 </div>
@@ -83,41 +80,41 @@
                                         <nav class="collapse header-mobile-border-top">
                                             <ul class="nav nav-pills" id="mainNav">
                                                 <li class="dropdown">
-                                                    <a class="dropdown-item dropdown-toggle" href="/">
+                                                    <a class="dropdown-item dropdown-toggle"
+                                                       href="/">
                                                         Home
-                                                        <i class="fas fa-chevron-down"></i></a>
+                                                    </a>
                                                 </li>
                                                 <li class="dropdown dropdown-mega">
-                                                    <a class="dropdown-item dropdown-toggle active current-page-active"
-                                                       href="/autores">
+                                                    <a class="dropdown-item dropdown-toggle" href="/autores">
                                                         Autores
-                                                        <i class="fas fa-chevron-down"></i></a>
+                                                    </a>
                                                 </li>
                                                 <li class="dropdown">
-                                                    <a class="dropdown-item dropdown-toggle "
+                                                    <a class="dropdown-item dropdown-toggle active current-page-active"
                                                        href="/libros">
                                                         Libros
-                                                        <i class="fas fa-chevron-down"></i></a>
+                                                    </a>
                                                 </li>
                                                 <li class="dropdown">
                                                     <a class="dropdown-item dropdown-toggle" href="/editoriales">
                                                         Editoriales
-                                                        <i class="fas fa-chevron-down"></i></a>
+                                                    </a>
                                                 </li>
                                                 <li class="dropdown">
                                                     <a class="dropdown-item dropdown-toggle" href="/categorias">
                                                         Categorías
-                                                        <i class="fas fa-chevron-down"></i></a>
+                                                    </a>
                                                 </li>
                                                 <li class="dropdown">
                                                     <a class="dropdown-item dropdown-toggle" href="/about-us">
                                                         About Us
-                                                        <i class="fas fa-chevron-down"></i></a>
+                                                    </a>
                                                 </li>
                                                 <li class="dropdown">
                                                     <a class="dropdown-item dropdown-toggle" href="/contacto">
                                                         Contacto
-                                                        <i class="fas fa-chevron-down"></i></a>
+                                                    </a>
                                                 </li>
                                             </ul>
                                         </nav>
@@ -151,35 +148,55 @@
 
     </div>
 
-    <!-- SECCION MODIFICADA Y SACADA DE https://codepen.io/lucasfernandodev/pen/QWgLNOL -->
-    <section class="container-xxl">
+    <div class="p-2"></div>
+
+    <div class="container-xxl">
         <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="text-5xl font-bold line-height-1">
-                    AUTORES
-                </h2>
+            <div class="col-sm-12 text-center pt-7 pb-7">
+                <h2 class="font-bold text-6xl">Detalles del Libro</h2>
             </div>
 
-            <ui:repeat value="${autores}" var="autor">
-                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 appear-animation animated fadeInUpShorter appear-animation-visible mt-5 mb-5"
-                     data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200"
-                     style="animation-delay: 200ms;">
-                    <div class="card">
-                        <header class="card-personal-header" style="background: url(static/img/autores/${autor.idAutor}.jpg);">
-                            <h1 class="card-personal-name line-height-3 text-white	">${autor.nombre}
-                                ${autor.apellidos}</h1>
-                            <!--
-                            <p class="card-personal-description">
-                                Lorem Ipsum
-                            </p> -->
-                        </header>
+            <div class="col-sm-6 text-center">
+                <img class="img-fluid" src="/static/img/portadas/${libro.portada}" style="max-width: 50% !important;"/>
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <h2 class="font-bold text-4xl">#{libro.titulo}</h2>
+                    <p>Categoría: #{libro.categoria.nombre}</p>
+                    <p>Editorial: #{libro.editorial.nombre}</p>
+                    <p>Fecha de Lanzamiento: #{libro.fechaLanzamiento}</p>
+                    <p>Idioma: #{libro.idioma}</p>
+                    <p>Páginas: #{libro.paginas}</p>
+                    <p>Descripción: #{libro.descripcion}</p>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 appear-animation animated fadeInUpShorter appear-animation-visible mt-5 mb-5"
+                         data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200"
+                         style="animation-delay: 200ms;">
+                        <h2 class="font-bold text-4xl pt-2 pb-2">Autor:</h2>
+                        <div class="card">
+                            <header class="card-personal-header" style="background: url(/static/img/autores/${libro.autor.idAutor}.jpg);">
+                                <h1 class="card-personal-name line-height-3 text-white">
+                                    #{libro.autor.nombre} #{libro.autor.apellidos}
+                                </h1>
+                                <!--
+                                <p class="card-personal-description">
+                                    Lorem Ipsum
+                                </p> -->
+                            </header>
+                        </div>
                     </div>
                 </div>
-
-            </ui:repeat>
+            </div>
         </div>
-    </section>
+    </div>
 
+
+
+    <div class="p-3"></div>
 
     <footer id="footer">
         <div class="footer-copyright">

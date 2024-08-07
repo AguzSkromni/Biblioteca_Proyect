@@ -18,6 +18,9 @@ import com.biblioteca.ProBiblioteca.modelo.Libro;
 import com.biblioteca.ProBiblioteca.servicio.ILibroServicio;
 
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -38,7 +41,8 @@ public class IndexControlador {
         categoriaIndex(model);
         autoresDestacados(model);
 
-        return "index.xhtml"; // Retorna el nombre de la vista
+        System.out.println("Accediendo a index");
+        return "index.xhtml";
     }
 
     @GetMapping("/autores")
@@ -52,15 +56,23 @@ public class IndexControlador {
     }
 
     @GetMapping("/libros")
-    public String listarLibros(Model model) {
+    public String listarLibros(@RequestParam(required = false) Integer categoriaId, Model model) {
+
+
         List<Libro> listadoLibros = libroServicio.listarLibros();
+
+        if (categoriaId != null) {
+            listadoLibros = libroServicio.listarLibrosPorCategoriaId(categoriaId);
+        } else {
+            listadoLibros = libroServicio.listarLibros();
+        }
 
         Collections.shuffle(listadoLibros);
 
-        for (Libro libro : listadoLibros) {
-            System.out.println(libro);
-        }
 
+
+        List<Categoria> listadoCategorias = categoriaServicio.listaCategorias();
+        model.addAttribute("categorias", listadoCategorias);
         model.addAttribute("libros", listadoLibros);
         return "libros.xhtml";
     }
@@ -78,6 +90,28 @@ public class IndexControlador {
         model.addAttribute("categorias", categoriaList);
         return "categorias.xhtml";
     }
+
+    @GetMapping("/about-us")
+    public String aboutUs() {
+        return "about-us.xhtml";
+    }
+
+    @GetMapping("/contacto")
+    public String contacto() {
+        return "contact.xhtml";
+    }
+
+    @GetMapping("/libros/{id}")
+    public String verDetallesLibro(@PathVariable Integer id, Model model) {
+        Optional<Libro> libro = libroServicio.obtenerLibroPorId(id);
+        if (libro.isPresent()) {
+            model.addAttribute("libro", libro.get());
+            return "/detallesLibro.xhtml";
+        }
+        return "/error.xhtml";
+    }
+
+
 
     /* METODOS INDEX */
     public String randomLibroIndex(Model model){
