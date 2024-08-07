@@ -1,0 +1,19 @@
+docker run -d -p 8080:8080 --name biblioteca-container \
+-e DB_URL_DOCKER=jdbc:mysql://mysql-container:3307/biblioteca \
+-e DB_USER_NAME=root \
+-e DB_PASSWORD=admin \
+biblioteca-app
+
+docker rm -f biblioteca-container
+
+
+
+
+docker build -t biblioteca-app .
+
+
+
+docker run -d -p 8080:8080 --name biblioteca-container -e DB_URL_DOCKER=jdbc:mysql://mysql-container:3307/biblioteca -e DB_USER_NAME=root -e DB_PASSWORD=admin biblioteca-app
+
+
+docker logs biblioteca-container

@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.biblioteca.ProBiblioteca.modelo.*;
 import com.biblioteca.ProBiblioteca.repositorio.IEditorialRepositorio;
+import org.springframework.stereotype.Service;
 
+@Service
 public class EditorialServicio implements IEditorialServicio{
 
     @Autowired

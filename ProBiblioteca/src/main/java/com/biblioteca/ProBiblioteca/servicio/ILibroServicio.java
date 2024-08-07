@@ -12,4 +12,7 @@ public interface ILibroServicio {
     public void guardarLibro(Libro libro);
 
     public void eliminarLibro(Libro libro);
+
+    //BUSQUEDA POR ID CATEGORIA
+    List<Libro> listarLibrosPorCategoriaId(Integer idCategoria);
 }

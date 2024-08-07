@@ -13,6 +13,8 @@ public class LibroServicio implements ILibroServicio{
 
     @Autowired
     private ILibroRepositorio libroRespositorio;
+    @Autowired
+    private ICategoriaRepositorio categoriaRepositorio;
 
     @Override
     public List<Libro> listarLibros() {
@@ -33,6 +35,11 @@ public class LibroServicio implements ILibroServicio{
     @Override
     public void eliminarLibro(Libro libro) {
         libroRespositorio.delete(libro);
+    }
+
+    @Override
+    public List<Libro> listarLibrosPorCategoriaId(Integer idCategoria) {
+        return libroRespositorio.findByCategoriaIdCategoria(idCategoria);
     }
 
 }

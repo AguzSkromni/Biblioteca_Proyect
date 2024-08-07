@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.biblioteca.ProBiblioteca.modelo.Categoria;
 import com.biblioteca.ProBiblioteca.repositorio.ICategoriaRepositorio;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CategoriaServicio implements ICategoriaServicio{
 
     @Autowired

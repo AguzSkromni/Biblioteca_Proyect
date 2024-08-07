@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
-    xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
+    xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
 <h:head>
     <title>Biblioteca Proyecto</title>
@@ -25,31 +26,31 @@
         rel="stylesheet" type="text/css" />
 
     <!-- Vendor CSS -->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css" />
-    <link rel="stylesheet" href="vendor/animate/animate.compat.css" />
-    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css" />
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css" />
+    <link rel="stylesheet" href="static/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/vendor/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="static/vendor/animate/animate.compat.css" />
+    <link rel="stylesheet" href="static/vendor/simple-line-icons/css/simple-line-icons.min.css" />
+    <link rel="stylesheet" href="static/vendor/owl.carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="static/vendor/owl.carousel/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="static/vendor/magnific-popup/magnific-popup.min.css" />
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="css/theme.css" />
-    <link rel="stylesheet" href="css/theme-elements.css" />
-    <link rel="stylesheet" href="css/theme-blog.css" />
-    <link rel="stylesheet" href="css/theme-shop.css" />
+    <link rel="stylesheet" href="static/css/theme.css" />
+    <link rel="stylesheet" href="static/css/theme-elements.css" />
+    <link rel="stylesheet" href="static/css/theme-blog.css" />
+    <link rel="stylesheet" href="static/css/theme-shop.css" />
 
     <!-- Demo CSS -->
-    <link rel="stylesheet" href="css/demos/demo-landing.css" />
+    <link rel="stylesheet" href="static/css/demos/demo-landing.css" />
 
     <!-- Skin CSS -->
-    <link id="skinCSS" rel="stylesheet" href="css/skins/skin-landing.css" />
+    <link id="skinCSS" rel="stylesheet" href="static/css/skins/skin-landing.css" />
 
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
 
     <!-- Head Libs -->
-    <script src="vendor/modernizr/modernizr.min.js" />
+    <script src="static/vendor/modernizr/modernizr.min.js" />
 </h:head>
 
 <h:body>
@@ -88,7 +89,7 @@
                                 <div class="header-logo" style="width: 100px; height: auto;">
                                     <a href="/">
                                         <img alt="Porto" width="100" height="auto" data-sticky-width="82"
-                                            data-sticky-height="40" src="img/logo/logo.png"
+                                            data-sticky-height="40" src="static/img/logo/logo.png"
                                             style="top: 0px; width: 100px; height: auto;" />
                                     </a>
                                 </div>
@@ -128,12 +129,12 @@
                                                         <i class="fas fa-chevron-down"></i></a>
                                                 </li>
                                                 <li class="dropdown">
-                                                    <a class="dropdown-item dropdown-toggle" href="#">
+                                                    <a class="dropdown-item dropdown-toggle" href="/about-us">
                                                         About Us
                                                         <i class="fas fa-chevron-down"></i></a>
                                                 </li>
                                                 <li class="dropdown">
-                                                    <a class="dropdown-item dropdown-toggle" href="#">
+                                                    <a class="dropdown-item dropdown-toggle" href="/contacto">
                                                         Contacto
                                                         <i class="fas fa-chevron-down"></i></a>
                                                 </li>
@@ -167,371 +168,82 @@
     </div>
 
 
+    <section>
+        <main class="container-xxl">
+            <h2 class="text-center mt-5 mb-5">Editoriales</h2>
+            <div class="row">
+                <ui:repeat value="#{editoriales}" var="editorial">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">ID: #{editorial.idEditorial}</h5>
+                                <p class="card-text">Nombre: #{editorial.nombre}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ui:repeat>
+            </div>
+        </main>
+    </section>
 
-    <!--
-    <main>
-        <h2>Libros Destacados</h2>
-    </main>
-    -->
 
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
 
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
 
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid expedita minima accusamus dolorum illo
-        officiis esse blanditiis, molestiae, maxime similique fuga sequi? Natus reiciendis explicabo voluptatum, impedit
-        corporis quo.
 
-    </div>
 
-    <footer>
-        <p>© 2024 Biblioteca</p>
+
+    <footer id="footer">
+        <div class="footer-copyright">
+            <div class="container py-2">
+                <div class="row py-4">
+                    <div class="col text-center">
+                        <ul class="footer-social-icons social-icons social-icons-clean social-icons-icon-light mb-3">
+                            <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank"
+                                                                 title="Facebook"><i
+                                    class="fab fa-facebook-f text-2"></i></a></li>
+                            <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank"
+                                                                title="Twitter"><i
+                                    class="fab fa-twitter text-2"></i></a></li>
+                            <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank"
+                                                                 title="Linkedin"><i
+                                    class="fab fa-linkedin-in text-2"></i></a></li>
+                        </ul>
+                        <p><strong>© 2024 Biblioteca</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Vendor -->
-		<script src="vendor/jquery/jquery.min.js"></script>
-		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
-		<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
-		<script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="vendor/jquery.validation/jquery.validate.min.js"></script>
-		<script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-		<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
-		<script src="vendor/lazysizes/lazysizes.min.js"></script>
-		<script src="vendor/isotope/jquery.isotope.min.js"></script>
-		<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-		<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-		<script src="vendor/vide/jquery.vide.min.js"></script>
-		<script src="vendor/vivus/vivus.min.js"></script>
+		<script src="static/vendor/jquery/jquery.min.js"></script>
+		<script src="static/vendor/jquery.appear/jquery.appear.min.js"></script>
+		<script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+		<script src="static/vendor/jquery.cookie/jquery.cookie.min.js"></script>
+		<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="static/vendor/jquery.validation/jquery.validate.min.js"></script>
+		<script src="static/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+		<script src="static/vendor/jquery.gmap/jquery.gmap.min.js"></script>
+		<script src="static/vendor/lazysizes/lazysizes.min.js"></script>
+		<script src="static/vendor/isotope/jquery.isotope.min.js"></script>
+		<script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+		<script src="static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script src="static/vendor/vide/jquery.vide.min.js"></script>
+		<script src="static/vendor/vivus/vivus.min.js"></script>
 
 		<!-- Theme Base, Components and Settings -->
-		<script src="js/theme.js"></script>
+		<script src="static/js/theme.js"></script>
 
 		<!-- Circle Flip Slideshow Script -->
-		<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+		<script src="static/vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
 		<!-- Current Page Views -->
-		<script src="js/views/view.home.js"></script>
+		<script src="static/js/views/view.home.js"></script>
 
 		<!-- Theme Custom -->
-		<script src="js/custom.js"></script>
+		<script src="static/js/custom.js"></script>
 
 		<!-- Theme Initialization Files -->
-		<script src="js/theme.init.js"></script>
+		<script src="static/js/theme.init.js"></script>
 
 
 </h:body>
