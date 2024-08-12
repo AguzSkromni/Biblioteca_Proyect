@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html
+      xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+    <title>CRUD Operations</title>
+</h:head>
+<h:body>
+    <section class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>CRUD</h2>
+                <h:form>
+                    <h1>CRUD Operations</h1>
+                    <!-- Crear (Create) -->
+                    <h:panelGrid columns="2">
+                        <h:outputLabel for="newItem" value="Nuevo Ítem:"/>
+                        <h:inputText id="newItem" value="#{crudControlador.newItem}"/>
+                        <h:commandButton value="Crear" action="#{crudControlador.create}"/>
+                    </h:panelGrid>
+
+                    <!-- Leer (Read) -->
+                    <h:dataTable value="#{crudControlador.items}" var="item">
+                        <h:column>
+                            <f:facet name="header">ID</f:facet>
+                            #{item.id}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Nombre</f:facet>
+                            #{item.name}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Acciones</f:facet>
+                            <h:commandButton value="Editar" action="#{crudControlador.edit(item)}"/>
+                            <h:commandButton value="Eliminar" action="#{crudControlador.delete(item)}"/>
+                        </h:column>
+                    </h:dataTable>
+
+                    <!-- Actualizar (Update) -->
+                    <h:panelGrid columns="2" rendered="#{not empty crudControlador.selectedItem}">
+                        <h:outputLabel for="updateItem" value="Actualizar Ítem:"/>
+                        <h:inputText id="updateItem" value="#{crudControlador.selectedItem.name}"/>
+                        <h:commandButton value="Actualizar" action="#{crudControlador.update}"/>
+                    </h:panelGrid>
+                </h:form>
+            </div>
+        </div>
+    </section>
+</h:body>
+</html>

@@ -84,6 +84,16 @@ public class IndexControlador {
         return "editoriales.xhtml";
     }
 
+    @GetMapping("editoriales/{id}")
+    public String verDetallesEditoriales(@PathVariable Integer id, Model model){
+        Optional<Editorial> editorial = editorialServicio.obtenerEditorialesPorId(id);
+        if (editorial.isPresent()) {
+            model.addAttribute("editorial", editorial.get());
+            return "/detallesEditorial.xhtml";
+        }
+        return "/error.xhtml";
+    }
+
     @GetMapping("/categorias")
     public String listarCategorias(Model model) {
         List<Categoria> categoriaList = categoriaServicio.listaCategorias();
@@ -96,10 +106,8 @@ public class IndexControlador {
         return "about-us.xhtml";
     }
 
-    @GetMapping("/contacto")
-    public String contacto() {
-        return "contact.xhtml";
-    }
+
+
 
     @GetMapping("/libros/{id}")
     public String verDetallesLibro(@PathVariable Integer id, Model model) {

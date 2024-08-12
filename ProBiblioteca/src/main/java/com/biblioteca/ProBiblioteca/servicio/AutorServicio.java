@@ -24,11 +24,13 @@ public class AutorServicio implements IAutorServicio{
 
     @Override
     public Optional<Autor> obtenerAutorPorId(Integer id) {
+
         return autorRepositorio.findById(id);
     }
 
     @Override
     public void guardarAutor(Autor autor) {
+
         autorRepositorio.save(autor);
     }
 
